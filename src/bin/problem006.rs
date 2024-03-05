@@ -1,3 +1,6 @@
+// Problem #6: Sum Square Difference
+// https://projecteuler.net/problem=6
+
 use std::io::{self, BufRead};
 
 fn sum_square_difference(n: u32) -> u32 {
@@ -17,7 +20,7 @@ fn main() {
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
 
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
+    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<u32>().unwrap();
 
     for _ in 0..t {
         println!("\nChoose a natural number:");
