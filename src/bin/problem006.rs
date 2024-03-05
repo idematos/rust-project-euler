@@ -13,12 +13,14 @@ fn sum_square_difference(n: u32) -> u32 {
 }
 
 fn main() {
+    println!("How many test cases would you like to execute?");
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
 
     let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
 
     for _ in 0..t {
+        println!("\nChoose a natural number:");
         let n = stdin_iterator
             .next()
             .unwrap()
@@ -27,6 +29,6 @@ fn main() {
             .parse::<u32>()
             .unwrap();
 
-        println!("{}", sum_square_difference(n));
+        println!("The absolute difference between the sum of the squares of the first {} natural numbers and the square of the sum of these numbers is {}.", n, sum_square_difference(n));
     }
 }
