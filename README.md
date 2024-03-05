@@ -1,5 +1,5 @@
 # rust-project-euler
-Generalized solutions for the natural numbers to some of [Project Euler](https://projecteuler.net/)'s problems in [Rust](https://github.com/rust-lang).
+Generalizing and solving some of [Project Euler](https://projecteuler.net/)'s problems in [Rust](https://github.com/rust-lang).
 
 ## Usage
 Run a specific problem:
