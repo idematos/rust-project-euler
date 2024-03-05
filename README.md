@@ -1,2 +1,7 @@
 # rust-project-euler
-Solutions to some of Project Euler's problems written in Rust 
+Generalized solutions for the natural numbers to some of [Project Euler](https://projecteuler.net/)'s problems in [Rust](https://github.com/rust-lang).
+
+## Usage
+Run a specific problem:
+
+    $ cargo run --bin problem001
