@@ -1,3 +1,6 @@
+// Problem #1: Multiples of 3 or 5
+// https://projecteuler.net/problem=1
+
 use std::io::{self, BufRead};
 
 fn sum_of_multiples_three_or_five(mut n: u32) -> u32 {

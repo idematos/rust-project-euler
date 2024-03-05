@@ -1,3 +1,6 @@
+// Problem #6: Sum Square Difference
+// https://projecteuler.net/problem=6
+
 use std::io::{self, BufRead};
 
 fn sum_square_difference(n: u32) -> u32 {
