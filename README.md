@@ -4,4 +4,4 @@ Generalizing and solving some of [Project Euler](https://projecteuler.net/)'s pr
 ## Usage
 Run a specific problem:
 
-    $ cargo run --bin problem001
+    cargo run --bin problem001
