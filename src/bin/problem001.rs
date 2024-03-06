@@ -3,16 +3,16 @@
 
 use std::io::{self, BufRead};
 
-fn sum_of_multiples_three_or_five(mut n: u32) -> u32 {
+fn sum_of_multiples_three_or_five(mut n: u64) -> u64 {
     n -= 1;
-    let sum = (sum_divisible_by(n, 3) + sum_divisible_by(n, 5)) - sum_divisible_by(n, 15);
-    sum
+
+    (sum_divisible_by(n, 3) + sum_divisible_by(n, 5)) - sum_divisible_by(n, 15)
 }
 
-fn sum_divisible_by(n: u32, k: u32) -> u32 {
+fn sum_divisible_by(n: u64, k: u64) -> u64 {
     let p = n / k;
-    let sum = k * p * (p + 1) / 2;
-    sum
+
+    k * p * (p + 1) / 2
 }
 
 fn main() {
@@ -24,7 +24,7 @@ fn main() {
 
     for _ in 0..t {
         println!("\nChoose a natural number:");
-        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u32>().unwrap();
+        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
         println!("The sum of all the multiples of 3 or 5 below {} is {}.", n, sum_of_multiples_three_or_five(n));
     }
 }

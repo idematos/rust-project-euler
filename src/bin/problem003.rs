@@ -3,7 +3,7 @@
 
 use std::io::{self, BufRead};
 
-fn largest_prime_factor(mut n: u32) -> u32 {
+fn largest_prime_factor(mut n: u64) -> u64 {
     let mut i = 2;
     while i * i <= n {
         if n % i == 0 {
@@ -12,6 +12,7 @@ fn largest_prime_factor(mut n: u32) -> u32 {
             i += 1;
         }
     }
+
     n
 }
 
@@ -24,7 +25,7 @@ fn main() {
 
     for _ in 0..t {
         println!("\nChoose a natural number:");
-        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u32>().unwrap();
+        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
         println!("The largest prime factor of {} is {}.", n, largest_prime_factor(n));
     }
 }

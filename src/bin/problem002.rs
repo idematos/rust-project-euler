@@ -21,6 +21,7 @@ fn sum_of_even_fibonacci(n: u64) -> u64 {
             third_fib_num = first_fib_num + second_fib_num;
         }
     }
+
     sum
 }
 
