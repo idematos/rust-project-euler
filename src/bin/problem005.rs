@@ -1,3 +1,6 @@
+// Problem #5: Smallest multiple
+// https://projecteuler.net/problem=5
+
 use std::collections::HashMap;
 use std::io::{self, BufRead};
 
@@ -45,6 +48,7 @@ fn smallest_multiple(n: u64) -> u64 {
 }
 
 fn main() {
+    println!("How many test cases would you like to execute?");
     let stdin = io::stdin();
     let mut stdin_iterator = stdin.lock().lines();
 
