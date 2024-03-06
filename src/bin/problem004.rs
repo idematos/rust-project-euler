@@ -31,6 +31,7 @@ fn main() {
     let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
 
     for _ in 0..t {
+        println!("\nChoose a natural number:");
         let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
         println!("The largest palindrome made from the product of two 3-digit numbers which is less than {} is {}", n, find_largest_palindrome_less_than(n));
     }

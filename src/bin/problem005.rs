@@ -55,6 +55,7 @@ fn main() {
     let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<u32>().unwrap();
 
     for _ in 0..t {
+        println!("\nChoose a natural number:");
         let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
         println!("{}", smallest_multiple(n));
     }
