@@ -57,6 +57,6 @@ fn main() {
     for _ in 0..t {
         println!("\nChoose a natural number:");
         let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-        println!("{}", smallest_multiple(n));
+        println!("The smallest positive number that is evenly divisible by all of the numbers from 1 to {} is {}.", n, smallest_multiple(n));
     }
 }
