@@ -1,8 +1,6 @@
 // Problem #6: Sum Square Difference
 // https://projecteuler.net/problem=6
 
-use std::io::{self, BufRead};
-
 fn sum_square_difference(n: u64) -> u64 {
     let mut sum: u64 = 0;
     let mut sum_of_square: u64 = 0;
@@ -16,22 +14,7 @@ fn sum_square_difference(n: u64) -> u64 {
 }
 
 fn main() {
-    println!("How many test cases would you like to execute?");
-    let stdin = io::stdin();
-    let mut stdin_iterator = stdin.lock().lines();
+    let n = 100;
 
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<u32>().unwrap();
-
-    for _ in 0..t {
-        println!("\nChoose a natural number:");
-        let n = stdin_iterator
-            .next()
-            .unwrap()
-            .unwrap()
-            .trim()
-            .parse::<u64>()
-            .unwrap();
-
-        println!("The absolute difference between the sum of the squares of the first {} natural numbers and the square of the sum of these numbers is {}.", n, sum_square_difference(n));
-    }
+    println!("\nThe difference between the sum of the squares of the first {} natural numbers and the square of the sum of these numbers is {}.", n, sum_square_difference(n));
 }

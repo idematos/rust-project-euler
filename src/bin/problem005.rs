@@ -2,7 +2,6 @@
 // https://projecteuler.net/problem=5
 
 use std::collections::HashMap;
-use std::io::{self, BufRead};
 
 fn get_prime_factors(n: u64) -> HashMap<u64, u64> {
     let mut factors = HashMap::new();
@@ -48,15 +47,7 @@ fn smallest_multiple(n: u64) -> u64 {
 }
 
 fn main() {
-    println!("How many test cases would you like to execute?");
-    let stdin = io::stdin();
-    let mut stdin_iterator = stdin.lock().lines();
+    let n = 20;
 
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<u32>().unwrap();
-
-    for _ in 0..t {
-        println!("\nChoose a natural number:");
-        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-        println!("The smallest positive number that is evenly divisible by all of the numbers from 1 to {} is {}.", n, smallest_multiple(n));
-    }
+    println!("\nThe smallest positive number that is evenly divisible by all of the numbers from 1 to {} is {}.", n, smallest_multiple(n));
 }
