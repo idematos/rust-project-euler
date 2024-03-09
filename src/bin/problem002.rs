@@ -1,8 +1,6 @@
 // Problem #2: Even Fibonacci Numbers
 // https://projecteuler.net/problem=2
 
-use std::io::{self, BufRead};
-
 fn sum_of_even_fibonacci(n: u64) -> u64 {
     let mut sum = 0;
 
@@ -26,15 +24,7 @@ fn sum_of_even_fibonacci(n: u64) -> u64 {
 }
 
 fn main() {
-    println!("How many test cases would you like to execute?");
-    let stdin = io::stdin();
-    let mut stdin_iterator = stdin.lock().lines();
+    let n = 4000000;
 
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-
-    for _ in 0..t {
-        println!("\nChoose a natural number:");
-        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-        println!("The sum of the even-valued Fibonacci terms below {} is {}.", n, sum_of_even_fibonacci(n));
-    }
+    println!("\nThe sum of the even-valued Fibonacci terms below {} is {}.", n, sum_of_even_fibonacci(n));
 }

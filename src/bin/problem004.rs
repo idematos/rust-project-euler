@@ -1,10 +1,8 @@
 // Problem #4: Largest palindrome product
 // https://projecteuler.net/problem=4
 
-use std::io::{self, BufRead};
-
-fn find_largest_palindrome_less_than(n: u64) -> u64 {
-    'outer: for num in (10000..(n-1)).rev() {
+fn find_largest_palindrome() -> u64 {
+    'outer: for num in (10000..998001).rev() {
         for factor in (100..999).rev() {
             if num % factor == 0 {
                 if (num / factor).to_string().len() == 3 {
@@ -24,15 +22,5 @@ fn find_largest_palindrome_less_than(n: u64) -> u64 {
 }
 
 fn main() {
-    println!("How many test cases would you like to execute?");
-    let stdin = io::stdin();
-    let mut stdin_iterator = stdin.lock().lines();
-
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
-
-    for _ in 0..t {
-        println!("\nChoose a natural number:");
-        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-        println!("The largest palindrome made from the product of two 3-digit numbers which is less than {} is {}", n, find_largest_palindrome_less_than(n));
-    }
+    println!("\nThe largest palindrome made from the product of two 3-digit numbers is {}.", find_largest_palindrome());
 }

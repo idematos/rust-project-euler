@@ -1,8 +1,6 @@
 // Problem #7: 10001st prime
 // https://projecteuler.net/problem=7
 
-use std::io::{self, BufRead};
-
 fn nth_prime(n: u64) -> u64 {
     let mut primes = Vec::<u64>::new();
     let mut prime = 2;
@@ -23,15 +21,7 @@ fn nth_prime(n: u64) -> u64 {
 }
 
 fn main() {
-    println!("How many test cases would you like to execute?");
-    let stdin = io::stdin();
-    let mut stdin_iterator = stdin.lock().lines();
+    let n = 10001;
 
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
-
-    for _ in 0..t {
-        println!("\nChoose a natural number:");
-        let n = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-        println!("The {}th prime number is {}.", n, nth_prime(n));
-    }
+    println!("\nThe {}th prime number is {}.", n, nth_prime(n));
 }
