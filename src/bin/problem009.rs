@@ -1,17 +1,13 @@
 // Problem #9: Special Pythagorean triplet
 // https://projecteuler.net/problem=9
 
-fn is_pithagorean_triplet(a: i64, b: i64, c: i64) -> bool {
-    c*c == a*a + b*b
-}
-
 fn get_max_product_pithagorean_triplet(n: i64) -> i64 {
     let mut product = -1;
     for c in (1..(n-1)).rev() {
         for b in (1..(c-1)).rev() {
-            let a = n - b - c;
-            if is_pithagorean_triplet(a,b,c) {
-                let new_product = a*b*c;
+            let a: f64 = ((c*c - b*b) as f64).sqrt();
+            if a == (n - b - c) as f64 {
+                let new_product = (a as i64)*b*c;
                 if new_product > product {
                     product = new_product;
                 }
