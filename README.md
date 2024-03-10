@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # rust-project-euler
 <img src="https://projecteuler.net/profile/idematos.png" alt="https://projecteuler.net/profile/idematos.png">
 
