@@ -1,65 +1,37 @@
 // Problem #8: Largest product in a series
 // https://projecteuler.net/problem=8
 
-use std::io::{self, BufRead};
-
-fn number_to_vec(n: u64) -> Vec<u64> {
-    let mut digits = Vec::new();
-    let mut n = n;
-    while n > 9 {
-        digits.push(n % 10);
-        n = n / 10;
+fn get_product(k: i32, chars: Vec<char>) -> u64 {
+    let mut product: u64 = chars[0].to_digit(10u32).unwrap() as u64;
+    for i in 1..k {
+        let int_char: u64 = chars[i as usize].to_digit(10u32).unwrap() as u64;
+        product = product * int_char;
     }
-    digits.push(n);
-    digits.reverse();
-    digits
-}
 
-fn get_product(vec: &[u64]) -> u64 {
-    let mut product = vec[0];
-    for i in 1..vec.len() {
-        product = product * vec[i];
-    }
     product
 }
 
-fn greatest_product(n: u64, k: u64, num: u64) -> u64 {
-    let vec_num = number_to_vec(num);
+fn greatest_product(n: i32, k: i32, num: String) -> u64 {
+    let num_digits: Vec<char> = num.chars().collect();
 
     let uk = k as usize;
-    let mut product= 0;
+    let mut product = 0;
     for i in 0..(n-k+1) {
         let ui = i as usize;
 
-        let next_product = get_product(&vec_num[ui..(uk+ui)]);
+        let next_product = get_product(k, (&num_digits[ui..(uk+ui)]).to_vec());
         if next_product > product {
             product = next_product;
         }
     }
+
     product
 }
 
 fn main() {
-    println!("How many test cases would you like to execute?");
-    let stdin = io::stdin();
-    let mut stdin_iterator = stdin.lock().lines();
+    let n = 1000;
+    let k = 13;
+    let num: String = String::from("7316717653133062491922511967442657474235534919493496983520312774506326239578318016984801869478851843858615607891129494954595017379583319528532088055111254069874715852386305071569329096329522744304355766896648950445244523161731856403098711121722383113622298934233803081353362766142828064444866452387493035890729629049156044077239071381051585930796086670172427121883998797908792274921901699720888093776657273330010533678812202354218097512545405947522435258490771167055601360483958644670632441572215539753697817977846174064955149290862569321978468622482839722413756570560574902614079729686524145351004748216637048440319989000889524345065854122758866688116427171479924442928230863465674813919123162824586178664583591245665294765456828489128831426076900422421902267105562632111110937054421750694165896040807198403850962455444362981230987879927244284909188845801561660979191338754992005240636899125607176060588611646710940507754100225698315520005593572972571636269561882670428252483600823257530420752963450");
 
-    let t = stdin_iterator.next().unwrap().unwrap().trim().parse::<i32>().unwrap();
-
-    for _ in 0..t {
-        println!("\nChoose the number length and the amount of factor separated by space (e.g. '10 5'):");
-        let first_multiple_input: Vec<String> = stdin_iterator.next().unwrap().unwrap()
-            .split(' ')
-            .map(|s| s.to_string())
-            .collect();
-
-        let n = first_multiple_input[0].trim().parse::<u64>().unwrap();
-
-        let k = first_multiple_input[1].trim().parse::<u64>().unwrap();
-
-        println!("\nWrite the number:");
-        let num = stdin_iterator.next().unwrap().unwrap().trim().parse::<u64>().unwrap();
-
-        println!("The greatest product of {} consecutive digits in {} is {}.", k, num, greatest_product(n,k,num));
-    }
+    println!("The greatest product of {} adjacent digits in the {}-digit number is {}", k, n, greatest_product(n,k,num));
 }
