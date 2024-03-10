@@ -23,5 +23,5 @@ fn sum_primes_below(n: i64) -> i64 {
 fn main() {
     let n = 2000000;
 
-    println!("The sum of all the primes below {} is {}.", n, sum_primes_below(n));
+    println!("\nThe sum of all the primes below {} is {}.", n, sum_primes_below(n));
 }

@@ -21,5 +21,5 @@ fn get_max_product_pithagorean_triplet(n: i64) -> i64 {
 fn main() {
     let n = 1000;
 
-    println!("The product abc for the largest Pythagorean triplet (a,b,c) such that a+b+c = {} is {}.", n, get_max_product_pithagorean_triplet(n));
+    println!("\nThe product abc for the largest Pythagorean triplet (a,b,c) such that a+b+c = {} is {}.", n, get_max_product_pithagorean_triplet(n));
 }
