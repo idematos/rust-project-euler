@@ -1,8 +1,10 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-# rust-project-euler
+# Rust Project Euler
 <img src="https://projecteuler.net/profile/idematos.png" alt="https://projecteuler.net/profile/idematos.png">
 
-Solving [Project Euler](https://projecteuler.net/)'s problems in [Rust](https://github.com/rust-lang).
+Some solutions for [Project Euler](https://projecteuler.net/)'s problems written in Rust.
+
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Usage
 Run a specific problem:
