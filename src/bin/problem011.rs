@@ -40,7 +40,6 @@ fn greatest_product(grid: Vec<Vec<i32>>) -> i32 {
 
 fn main() {
     let mut grid: Vec<Vec<i32>> = Vec::with_capacity(20_usize);
-
     grid.push(Vec::from([08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08]));
     grid.push(Vec::from([49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00]));
     grid.push(Vec::from([81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 03, 49, 13, 36, 65]));
