@@ -36,5 +36,5 @@ fn longest_chain(n: u64) -> u64 {
 fn main() {
     let n = 1000000;
 
-    println!("\nThe starting number, under {}, that produces the longest chain is {}", n, longest_chain(n));
+    println!("\nThe starting number, under {}, that produces the longest chain is {}.", n, longest_chain(n));
 }
