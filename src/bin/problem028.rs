@@ -2,6 +2,7 @@
 // https://projecteuler.net/problem=28
 
 fn get_sum_diagonal(n: u64) -> u64 {
+    let n_squared = n * n;
     let mut diag = 1;
     let mut sum = diag;
     let mut i = 2;
@@ -10,7 +11,7 @@ fn get_sum_diagonal(n: u64) -> u64 {
             diag += i;
             sum += diag;
 
-            if diag == n * n {
+            if diag == n_squared {
                 break 'outer;
             }
         }
