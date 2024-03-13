@@ -6,7 +6,6 @@ use num_bigint::BigInt;
 use num_traits::FromPrimitive;
 
 fn distinct_terms(n: u32) -> usize {
-
     let mut distinct_terms: HashSet<BigInt> = HashSet::new();
     for a in 2..=n {
         for b in 2..=n {
