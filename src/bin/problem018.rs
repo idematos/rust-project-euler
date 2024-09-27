@@ -1,3 +1,6 @@
+// Project Euler #18: Maximum Path Sum I
+// https://projecteuler.net/problem=18
+
 fn main() {
     let mut triangle = vec![
         vec![75],
