@@ -1,3 +1,6 @@
+// Problem #17: Number Letter Counts
+// https://projecteuler.net/problem=17
+
 fn number_to_words(n: usize) -> String {
     let under_twenty = vec![
         "", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven",
