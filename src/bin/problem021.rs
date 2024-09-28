@@ -20,7 +20,7 @@ fn proper_divisors_sum(n: usize) -> usize {
 
 fn main() {
     let mut amicable_numbers = std::collections::HashSet::new();
-    let limit = 10_000;
+    let limit = 10000;
 
     for a in 2..limit {
         let b = proper_divisors_sum(a);
