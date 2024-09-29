@@ -6,6 +6,10 @@ Some solutions for [Project Euler](https://projecteuler.net/)'s problems written
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
+## Prerequisites
+
+Rust and Cargo installed. You can download them from [here](https://www.rust-lang.org/tools/install).
+
 ## Usage
 Run a specific problem:
 
