@@ -39,5 +39,5 @@ fn main() {
         }
     }
 
-    println!("The smallest value is {}", min_difference);
+    println!("The smallest value of |Pj - Pk| is {}", min_difference);
 }
