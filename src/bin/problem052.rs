@@ -1,9 +1,10 @@
-// Project Euler #52: Permuted Multiples
+// Problem #52: Permuted Multiples
 // https://projecteuler.net/problem=52
 
 fn is_permutation(a: usize, b: usize) -> bool {
     let mut a_digits: Vec<char> = a.to_string().chars().collect();
     let mut b_digits: Vec<char> = b.to_string().chars().collect();
+    
     a_digits.sort();
     b_digits.sort();
     a_digits == b_digits
