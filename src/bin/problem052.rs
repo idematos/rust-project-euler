@@ -1,4 +1,4 @@
-// Project Euler #52: 
+// Project Euler #52: Permuted Multiples
 // https://projecteuler.net/problem=52
 
 fn is_permutation(a: usize, b: usize) -> bool {
