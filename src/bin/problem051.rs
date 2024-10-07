@@ -1,4 +1,4 @@
-// Project Euler #51: Prime Digit Replacements
+// Problem #51: Prime Digit Replacements
 // https://projecteuler.net/problem=51
 
 use std::collections::HashSet;
