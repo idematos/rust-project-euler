@@ -2,7 +2,7 @@
 // https://projecteuler.net/problem=86
 
 fn is_perfect_square(x: usize) -> bool {
-    let s = (x as f64).sqrt() as usize;
+    let s = (x as f64).sqrt().round() as usize;
     s * s == x
 }
 
@@ -26,13 +26,12 @@ fn main() {
     let mut n = 0;
 
     loop {
-        n += 1;
-        let count = count_cuboids(n);
-        
+        n += 1; 
+        let count = count_cuboids(n); 
+
         if count > target {
+            println!("The minimum n such that there are more than {} cuboids is {}", target, n);
             break;
         }
     }
-
-    println!("The minimum n such that there are more than 1000 cuboids is {}", n);
 }
