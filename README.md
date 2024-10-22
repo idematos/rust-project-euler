@@ -1,5 +1,7 @@
 # Rust Project Euler
 
+<img src="https://projecteuler.net/profile/idematos.png" alt="https://projecteuler.net/profile/idematos.png">
+
 Some solutions for [Project Euler](https://projecteuler.net/)'s problems written in Rust.
 
 ## Prerequisites
