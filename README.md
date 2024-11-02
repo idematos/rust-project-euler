@@ -13,7 +13,7 @@ Run a specific problem:
 
     cargo run --bin problem001
 
-## Why Only the First 100 Problems?
+## Why only the first 100 problems?
 
 Project Euler's policy allows sharing solutions only for the first 100 problems. 
 
